@@ -1,4 +1,4 @@
-$PrometheusExporter_Url = "https://github.com/LaloSoftApps/grafanalib/archive/refs/heads/master.zip"
+$PrometheusExporter_Url = "https://github.com/LaloSoftApps/PrometheusWindowsExporter/archive/refs/heads/main.zip"
 $PrometheusExporter_Path = "C:\PrometheusExporter"
 
 if (Test-Path -Path $PrometheusExporter_Path) {
@@ -10,7 +10,7 @@ if (Test-Path -Path $PrometheusExporter_Path) {
 Set-Location -LiteralPath $PrometheusExporter_Path
 Invoke-WebRequest -Uri $PrometheusExporter_Url -OutFile PrometheusExporter.zip
 
-Expand-Archive -LiteralPath .\PrometheusExporter.zip -DestinationPath .\PrometheusExporter\
+Expand-Archive -LiteralPath .\PrometheusExporter.zip -DestinationPath .\
 
 Stop-Service PrometheusExporter
 .\nssm remove PrometheusExporter confirm
