@@ -1,0 +1,13 @@
+collectors:
+  enabled: cpu,os
+collector:
+  service:
+    services-where: Name='PrometheusExporter'
+log:
+  level: debug
+scrape:
+  timeout-margin: 0.5
+telemetry:
+  addr: ":8080"
+  path: /metrics
+  max-requests: 5
