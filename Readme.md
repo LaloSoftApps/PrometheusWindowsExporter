@@ -2,9 +2,9 @@ $PrometheusExporter_Url = "https://github.com/LaloSoftApps/PrometheusWindowsExpo
 $PrometheusExporter_Path = "C:\PrometheusExporter"
 
 if (Test-Path -Path $PrometheusExporter_Path) {
-	Write-Host "El Path ya Existe"
+        Write-Host "El Path ya Existe"
 } else {
-	New-Item -Path $PrometheusExporter_Path -ItemType "directory" -Force
+        New-Item -Path $PrometheusExporter_Path -ItemType "directory" -Force
 }
 
 Set-Location -LiteralPath $PrometheusExporter_Path
