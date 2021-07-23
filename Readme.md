@@ -15,7 +15,8 @@ Remove-Item .\PrometheusExporter.zip -Force
 Stop-Service PrometheusExporter 
 .\nssm remove PrometheusExporter confirm
 
-#.\nssm.exe install PrometheusExporter windows_exporter.exe 
+#.\nssm.exe install PrometheusExporter windows_exporter.exe
+
 .\nssm.exe install PrometheusExporter windows_exporter.exe --config.file=$PrometheusExporter_Path\config.yml 
 Start-Service PrometheusExporter
 
