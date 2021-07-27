@@ -1,6 +1,9 @@
 @ECHO OFF
+
 nssm.exe install PrometheusExporter windows_exporter.exe --config.file=%cd%\config.yml
+
 net start PrometheusExporter
+
 
 netsh advfirewall firewall add rule name="PrometheusExporter 8080" dir=in action=allow protocol=TCP localport=8080
 
